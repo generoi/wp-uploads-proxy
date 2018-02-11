@@ -25,4 +25,4 @@ Install dependencies
 
 Run the tests
 
-    npm run test
+    composer test

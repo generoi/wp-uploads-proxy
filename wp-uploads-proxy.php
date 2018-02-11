@@ -27,7 +27,7 @@ class Plugin
     public $github_url = 'https://github.com/generoi/wp-uploads-proxy';
 
     /** @var Local timber image success cache */
-    protected $_cache = [];
+    protected $cache = [];
 
     public static function get_instance()
     {
@@ -73,11 +73,11 @@ class Plugin
     public function download_timber_image($image)
     {
         $image_path = $image->file_loc;
-        if (isset($this->_cache[$image_path]) || file_exists($image_path)) {
+        if (isset($this->cache[$image_path]) || file_exists($image_path)) {
             return;
         }
         $image = RemoteImage::fromLocalPath($image_path);
-        $this->_cache[$image_path] = $image->download();
+        $this->cache[$image_path] = $image->download();
     }
 }
 
