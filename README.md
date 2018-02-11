@@ -1,24 +1,20 @@
-# wp-plugin-boilerplate
+# wp-uploads-proxy
 
-> A wordpress boilerplate plugin with which you can write ES6 JavaScript and SASS.
-
-## Requirements
-
-_Does the plugin have any requirements?_
+> A wordpress plugin for downloading uploaded files from a production host when
+requested locally.
 
 ## Features
 
-_A list of features_.
+- Downloads images when hit by 404
+- Downloads Timber images when initialized.
 
-## API
+## Installation
 
-_Any hooks exposed?_
+Only install this on development or staging environments together with the following defines:
 
-```php
-// Load recaptcha script.
-add_filter('gravityforms-timber/options', function ($options) {
-  $options['recaptcha'] = true;
-});
+```
+define('WPUP_IS_LOCAL', env('WPUP_IS_LOCAL') ?: false);
+define('WPUP_SITEURL', 'http://example.production');
 ```
 
 ## Development
@@ -26,19 +22,7 @@ add_filter('gravityforms-timber/options', function ($options) {
 Install dependencies
 
     composer install
-    npm install
 
 Run the tests
 
     npm run test
-
-Build assets
-
-    # Minified assets which are to be committed to git
-    npm run build
-
-    # Development assets while developing the plugin
-    npm run build:development
-
-    # Watch for changes and re-compile while developing the plugin
-    npm run watch

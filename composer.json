@@ -32,7 +32,7 @@
   },
   "autoload": {
     "psr-4": {
-      "GeneroWP\\PluginBoilerplate\\": "src/"
+      "GeneroWP\\WpUploadsProxy\\": "src/"
     }
   },
   "scripts": {
