@@ -1,9 +1,9 @@
 {
-  "name": "generoi/wp-plugin-boilerplate",
+  "name": "generoi/wp-uploads-proxy",
   "type": "wordpress-plugin",
   "license": "MIT",
-  "description": "A boilerplate WordPress plugin",
-  "homepage": "https://github.com/generoi/wp-plugin-boilerplate",
+  "description": "A wordpress plugin for downloading uploaded files from a production host when requested locally.",
+  "homepage": "https://github.com/generoi/wp-uploads-proxy",
   "authors": [
     {
       "name": "Oskar Schöldström",
@@ -14,7 +14,7 @@
     "wordpress"
   ],
   "support": {
-    "issues": "https://github.com/generoi/wp-plugin-boilerplate/issues"
+    "issues": "https://github.com/generoi/wp-uploads-proxy/issues"
   },
   "repositories": [
     {
